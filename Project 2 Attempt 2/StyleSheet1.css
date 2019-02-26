@@ -1,6 +1,8 @@
 ﻿body {
     font-family: 'Mongolian Baiti', Arial, sans-serif;
-    background-image: linear-gradient(to right, yellow, red);
+    animation-name: easyAnimation4;
+    animation-duration: 14s;
+    animation-delay: 2s;
 }
 
 .section_top {
@@ -20,17 +22,20 @@ h3 {
     margin-top: 30px;
     vertical-align: middle;
 }
-tr:nth-child(1) td{
+tr:nth-child(1) td {
     animation-name: easyAnimation1;
     animation-duration: 8s;
+    animation-delay: 2s;
 }
 tr:nth-child(2) td {
     animation-name: easyAnimation2;
     animation-duration: 10s;
+    animation-delay: 2s;
 }
 tr:nth-child(3) td {
     animation-name: easyAnimation3;
     animation-duration: 12s;
+    animation-delay: 2s;
 }
 
 @media screen and (max-width: 480px) {
@@ -71,5 +76,15 @@ tr:nth-child(3) td {
     to {
         color: red;
         transform: rotate(17deg);
+    }
+}
+
+@keyframes easyAnimation4 {
+    from {
+        background-image: linear-gradient(to right, white, white);
+    }
+
+    to {
+        background-image: linear-gradient(to right, yellow, red);
     }
 }
