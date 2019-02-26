@@ -1,67 +1,75 @@
 ﻿body {
+    font-family: 'Mongolian Baiti', Arial, sans-serif;
+    background-image: linear-gradient(to right, yellow, red);
 }
 
-.auto-style3 {
-    height: 40px;
+.section_top {
+    margin: auto;
+    height: 100px;
+    position: relative;
 }
 
-.auto-style4 {
-    height: 40px;
-    width: 299px;
+.logo {
+    width: 100px;
+    height: 100px;
 }
 
-.auto-style5 {
-    width: 299px;
+h3 {
+    display: inline;
+    top: auto;
+    margin-top: 30px;
+    vertical-align: middle;
+}
+tr:nth-child(1) td{
+    animation-name: easyAnimation1;
+    animation-duration: 8s;
+}
+tr:nth-child(2) td {
+    animation-name: easyAnimation2;
+    animation-duration: 10s;
+}
+tr:nth-child(3) td {
+    animation-name: easyAnimation3;
+    animation-duration: 12s;
 }
 
-.auto-style8 {
-    height: 40px;
-    width: 271px;
-    text-align: right;
+@media screen and (max-width: 480px) {
+    h3 {
+        font-size: .9em;
+    }
 }
 
-.auto-style9 {
-    width: 271px;
+@keyframes easyAnimation1 {
+    from {
+        color: black;
+        transform: rotate(0);
+    }
+    to {
+        color: yellow;
+        transform: rotate(10deg);
+    }
 }
 
-.auto-style10 {
-    width: 271px;
-    text-align: right;
+@keyframes easyAnimation2 {
+    from {
+        color: black;
+        transform: rotate(0);
+    }
+
+    to {
+        color: orange;
+        transform: rotate(-15deg);
+    }
 }
 
-.auto-style11 {
-    font-size: larger;
-}
+@keyframes easyAnimation3 {
+    from {
+        color: black;
+        transform: rotate(0);
+    }
 
-.auto-style12 {
-    text-align: center;
-}
-
-.auto-style13 {
-    background-color: #FFFFFF;
-}
-
-.auto-style14 {
-    font-size: larger;
-    background-color: #FFFFFF;
-}
-
-.auto-style15 {
-    width: 271px;
-    text-align: right;
-    height: 42px;
-}
-
-.auto-style16 {
-    width: 299px;
-    height: 42px;
-}
-
-.auto-style17 {
-    height: 42px;
-}
-
-.auto-style18 {
-    font-size: large;
-    color: #0033CC;
+    to {
+        color: red;
+        transform: rotate(17deg);
+    }
 }
