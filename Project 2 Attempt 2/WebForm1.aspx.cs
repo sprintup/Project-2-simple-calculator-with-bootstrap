@@ -33,17 +33,32 @@ namespace Project_2_Attempt_2
                 {
                     
                 }
+
                 try
                 {
                     numberX = Convert.ToInt32(input_numberX.Text);
-                    numberY = Convert.ToInt32(input_numberY.Text);
-                    name = input_name.Text;
                 }
                 catch (Exception)
                 {
-                    
+                    input_numberX.Text = "";
+                    //display error
                 }
-                
+
+                try
+                {
+                    numberY = Convert.ToInt32(input_numberY.Text);
+                }
+                catch (Exception)
+                {
+                    input_numberY.Text = "";
+                    //display error
+                }
+
+                //name validation
+                name = input_name.Text;
+
+                //reset form
+                //clearInput();
 
                 //result
                 if (numberX >= 0 && numberX <= 9999 &&

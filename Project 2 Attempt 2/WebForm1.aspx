@@ -23,7 +23,7 @@
                             <asp:TextBox ID="input_numberX" runat="server" OnTextChanged="input_numberX_TextChanged"></asp:TextBox>
                         </td>
                         <td class="auto-style3 w-50">
-                            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="input_numberX" ErrorMessage="Please enter a whole number between 0 and 9999" ForeColor="Red" MaximumValue="9999" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="input_numberX" ErrorMessage="Please enter a whole number between 0 and 9999" ForeColor="Red" MaximumValue="9999" MinimumValue="0" Type="Integer" Font-Size="Small"></asp:RangeValidator>
                         </td>
                     </tr>
                     <tr>
@@ -32,16 +32,16 @@
                             <asp:TextBox ID="input_numberY" runat="server"></asp:TextBox>
                         </td>
                         <td class="auto-style17 w-50">
-                            <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="input_numberY" ErrorMessage="Please ENTER a whole number between 0 and 9999" ForeColor="Red" MaximumValue="9999" MinimumValue="0"></asp:RangeValidator>
+                            <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="input_numberY" ErrorMessage="Please enter a whole number between 0 and 9999" ForeColor="Red" MaximumValue="9999" MinimumValue="0" Font-Size="Small" Type="Integer"></asp:RangeValidator>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style10 w-25"><strong>Your name:</strong></td>
+                        <td class="auto-style10 w-25"><strong>Name:</strong></td>
                         <td class="auto-style5 w-25">
                             <asp:TextBox ID="input_name" runat="server"></asp:TextBox>
                         </td>
                         <td class="w-50">
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="input_name" ErrorMessage="Please enter your name" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="input_name" ErrorMessage="Please enter your name" ForeColor="Red" Font-Size="Small"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
