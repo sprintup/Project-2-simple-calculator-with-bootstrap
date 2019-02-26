@@ -31,13 +31,13 @@ namespace Project_2_Attempt_2 {
         protected global::System.Web.UI.WebControls.TextBox input_numberX;
         
         /// <summary>
-        /// Label1 control.
+        /// RangeValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
         
         /// <summary>
         /// input_numberY control.
@@ -49,13 +49,13 @@ namespace Project_2_Attempt_2 {
         protected global::System.Web.UI.WebControls.TextBox input_numberY;
         
         /// <summary>
-        /// Label2 control.
+        /// RangeValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator2;
         
         /// <summary>
         /// input_name control.
@@ -67,13 +67,13 @@ namespace Project_2_Attempt_2 {
         protected global::System.Web.UI.WebControls.TextBox input_name;
         
         /// <summary>
-        /// Label3 control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// Button_Submit control.

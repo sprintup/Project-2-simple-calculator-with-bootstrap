@@ -16,49 +16,51 @@
                 </strong>
             </h3>
             <div class="jumbotron">
-                <table style="width: 100%;">
+                <table class="w-100">
                     <tr>
-                        <td class="auto-style8"><strong>Whole number X:</strong></td>
-                        <td class="auto-style4">
-                            <asp:TextBox ID="input_numberX" runat="server"></asp:TextBox>
+                        <td class="auto-style8 w-25"><strong>X:</strong></td>
+                        <td class="auto-style4 w-25">
+                            <asp:TextBox ID="input_numberX" runat="server" OnTextChanged="input_numberX_TextChanged"></asp:TextBox>
                         </td>
-                        <td class="auto-style3">
-                            <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
+                        <td class="auto-style3 w-50">
+                            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="input_numberX" ErrorMessage="Please enter a whole number between 0 and 9999" ForeColor="Red" MaximumValue="9999" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style15"><strong>Whole number Y:</strong></td>
-                        <td class="auto-style16">
+                        <td class="auto-style15 w-25"><strong>Y:</strong></td>
+                        <td class="auto-style16 w-25">
                             <asp:TextBox ID="input_numberY" runat="server"></asp:TextBox>
                         </td>
-                        <td class="auto-style17">
-                            <asp:Label ID="Label2" runat="server" ForeColor="Red"></asp:Label>
+                        <td class="auto-style17 w-50">
+                            <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="input_numberY" ErrorMessage="Please ENTER a whole number between 0 and 9999" ForeColor="Red" MaximumValue="9999" MinimumValue="0"></asp:RangeValidator>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style10"><strong>Your name:</strong></td>
-                        <td class="auto-style5">
+                        <td class="auto-style10 w-25"><strong>Your name:</strong></td>
+                        <td class="auto-style5 w-25">
                             <asp:TextBox ID="input_name" runat="server"></asp:TextBox>
                         </td>
-                        <td>
-                            <asp:Label ID="Label3" runat="server" ForeColor="Red"></asp:Label>
+                        <td class="w-50">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="input_name" ErrorMessage="Please enter your name" ForeColor="Red"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style9">&nbsp;</td>
                         <td class="auto-style5">
                             <asp:Button ID="Button_Submit" runat="server" OnClick="Button1_Click" Text="Submit" class="btn btn-primary" />
-                            <asp:Button ID="Button_Clear" runat="server" OnClick="Button2_Click" Text="Clear" class="btn btn-danger"/>
+                            <asp:Button ID="Button_Clear" runat="server" OnClick="Button2_Click" Text="Clear" class="btn btn-danger" CausesValidation="False"/>
                         </td>
-                        <td>&nbsp;</td>
+                        <td>
+                            <asp:Panel ID="Panel1" runat="server">
+                                <div class="text-left">
+                                    <asp:Label ID="label_results" runat="server" CssClass="auto-style18"></asp:Label>
+                                </div>
+                            </asp:Panel>
+                        </td>
                     </tr>
                 </table>
             </div>
-            <asp:Panel ID="Panel1" runat="server">
-                <div class="auto-style12">
-                    <asp:Label ID="label_results" runat="server" CssClass="auto-style18"></asp:Label>
-                </div>
-            </asp:Panel>
+            
         </form>
     </div>
 </body>

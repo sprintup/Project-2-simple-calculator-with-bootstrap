@@ -16,6 +16,7 @@ namespace Project_2_Attempt_2
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             if (IsPostBack)
             {
                 System.Diagnostics.Debug.WriteLine($"In postback with numberX: {numberX}, numberY: {numberY}, name: {name}, result: {result}");
@@ -24,45 +25,25 @@ namespace Project_2_Attempt_2
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            resetLabels();
+            label_results.Text = "";
             if (IsValid)
             {
                 //number X 
                 if (input_numberX.Text == "") // not empty
                 {
-                    Label1.Text = "Please ENTER a whole number between 0 and 9999";
+                    
                 }
-                if (int.TryParse(input_numberX.Text, out int parsedX)) // set x number, will always be true
+                try
                 {
-                    numberX = parsedX;
-                }
-                if (numberX <= 0 || numberX >= 9999)
-                {
-                    Label1.Text = "Please enter a whole number BETWEEN 0 AND 9999";
-                }
-
-                //number Y
-                if (input_numberY.Text == "") // not empty
-                {
-                    Label2.Text = "Please ENTER a whole number between 0 and 9999";
-                }
-                if (int.TryParse(input_numberY.Text, out int parsedY)) // will always be true
-                {
-                    numberY = parsedY;
-                }
-                if (numberY <= 0 || numberY >= 9999) //in range
-                {
-                    Label2.Text = "Please enter a whole number BETWEEN 0 AND 9999";
-                }
-
-                //name
-                if (input_name.Text != "")
-                {
+                    numberX = Convert.ToInt32(input_numberX.Text);
+                    numberY = Convert.ToInt32(input_numberY.Text);
                     name = input_name.Text;
-                } else
-                {
-                    Label3.Text = "Please enter your name";
                 }
+                catch (Exception)
+                {
+                    
+                }
+                
 
                 //result
                 if (numberX >= 0 && numberX <= 9999 &&
@@ -95,15 +76,12 @@ namespace Project_2_Attempt_2
             input_numberY.Text = "";
             numberY = 0;
             input_name.Text = "";
-            resetLabels();
             label_results.Text = "";
         }
 
-        protected void resetLabels()
+        protected void input_numberX_TextChanged(object sender, EventArgs e)
         {
-            Label1.Text = "";
-            Label2.Text = "";
-            Label3.Text = "";
+
         }
     }
 }
